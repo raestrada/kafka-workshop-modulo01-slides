@@ -47,13 +47,32 @@
 					</script>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						# EDA: Resumen pragmático
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							### EDA: Resumen pragmático
 
-						> Un modelo pub-sub tradicional con ordenamiento estricto
-						, semántica de persistancia y durabilidad.
-					</script>
+							> Un modelo pub-sub tradicional con ordenamiento estricto
+							, semántica de persistancia y durabilidad.
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							### EDA (Kafka): Casos de uso
+	
+							- Colas: No soportan múltiples suscriptores y no alamacenan a alrgo plazo
+							- Pub/Sub: No garantizan orden, entrega 
+							y no alamacenan a alrgo plazo
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							### EDA: Casos de uso
+	
+							- Si sólo necesitas colas, usa [RabbitMQ](https://www.rabbitmq.com/)
+							- Si sólo necesitas pub/sub, usa [NATS](https://nats.io/)
+						</script>
+					</section>
 				</section>
 
 				<section>
