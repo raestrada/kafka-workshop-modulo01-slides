@@ -125,7 +125,7 @@
 							> Eventualmente, aparecen los micro-servicios y se utiliza como comunicación API RPC tipo REST
 
 							- ¿Qué sucede cuando uno de los micro-servicios tiene problemas?
-							- ¿Cómo adminsitro las versiones?
+							- ¿Cómo administro las versiones?
 							- ¿Cómo compenso errores?
 							- ¿Cómo realizo agregaciones con datos de diferentes micro-servicios?
 						</script>
@@ -168,7 +168,7 @@
 				<section>
 					<section data-markdown>
 						> La computación distribuida necesita mucha inversión y el tiempo real aún más.
-						Si las organizaciones se enfrentan al desafío de la distribución, mñultiples regiones y uptimes de 99.999%.
+						Si las organizaciones se enfrentan al desafío de la distribución, múltiples regiones y uptimes de 99.999%.
 						La ingesta de datos va en aumento, IoT, ML, 5G, etc.
 					</section>
 					<section data-markdown>
@@ -197,7 +197,7 @@
 
 				<section>
 					<section data-markdown>
-						### Para ser tiempo real, deemos pensar en eventos
+						### Para ser tiempo real, debemos pensar en eventos
 
 						> Un **evento** representa un hecho, algo que sucedió; es inmutable y en consecuencia cambia nuestra
 						forma de pensar sobre un dominio irrevocablemente.
@@ -210,7 +210,7 @@
 
 						- Cuando un consumidor compra un coche, el estado del coche pasa de "se vende" a "vendido"
 						- La orden #3245 ha sido confirmada
-						- La puerta delantwera izquierda del vehículo patente xx-xxxx ha sido abierta a las 11:34:5678Z en la posición (x,y)
+						- La puerta delantera izquierda del vehículo patente xx-xxxx ha sido abierta a las 11:34:5678Z en la posición (x,y)
 					</section>
 
 					<section data-markdown>
@@ -235,7 +235,7 @@
 						y es llamada **"Stream"**
 
 						Un Stream está definido por eventos que comparten una llave que los identifica y genera un secuencia
-						ordenada, reptible e inmutable de eventos relacinados.
+						ordenada, repetible e inmutable de eventos relacionados.
 
 					</section>
 					<section data-markdown>
@@ -249,7 +249,7 @@
 
 				<section>
 					<section data-markdown>
-						### Stream Procesing
+						### Stream Processing
 
 						> Un tipo de motor de procesamiento de datos que está diseñado con infinitos conjuntos de datos en mente.
 
@@ -308,7 +308,7 @@
 					<section data-markdown>
 						### El cambio principal de EDA es pensar desde el inicio en eventos y flujos
 
-						> Por ejemplo, las BD tienen conceptos de logs de eventos y operaciones stateless (map, filter) y statefull (reduce, join),
+						> Por ejemplo, las BD tienen conceptos de logs de eventos y operaciones stateless (map, filter) y stateful (reduce, join),
 						pero la diferencia es que están pensadas desde el inicio para soportar relaciones y obtener el máximo rendimiento
 						de un sólo servidor.
 
@@ -316,7 +316,7 @@
 					<section data-markdown>
 						### Tecnologías de Stream
 
-						> Existen varias. Muchas nacieron de Hadoop comop **Spark** y existen otrras como **Flink** y **Storm**. **Kafka** es especial 
+						> Existen varias. Muchas nacieron de Hadoop como **Spark** y existen otras como **Flink** y **Storm**. **Kafka** es especial 
 						porque considera desde cero un modelo pensado en eventos y streams, es decir, existe un alto acoplamiento en la tecnología
 						de procesamiento y los eventos permitiendo resolver temas como **Exactly-once**
 
@@ -390,7 +390,7 @@
 					<script type="text/template">
 						El middleware de mensajería tradicional no solo no está distribuido y, por lo tanto, no es escalable, sino que también
 						carece de almacenamiento persistente como característica central. Con un servidor de mensajería tradicional, los mensajes se
-						persistien en las colas hasta que el servidor intente una entrega, lo cual no está garantizado. Esto plantea desafíos
+						persisten en las colas hasta que el servidor intente una entrega, lo cual no está garantizado. Esto plantea desafíos
 						cuando necesitamos agregar un nuevo servicio y queremos que consuma eventos históricos.
 					</script>
 				</section>
@@ -400,7 +400,7 @@
 						Una solución alternativa sería exponer un endpoint en el lado del productor y usar este endpoint para
 						regenerar los eventos deseados. Pero incluso con esta característica, no podemos garantizar que estos eventos
 						sean idénticos a los consumidos anteriormente. Este es un anti-patrón: emparejaría los dos servicios
-						junto con una API, en lugar de con un contrato de transmisión. Un microservicio controlado por eventos debe poder
+						junto con una API, en lugar de con un contrato de transmisión. Un micro-servicio controlado por eventos debe poder
 						reproducir eventos históricos y mensajes que ocurrieron antes de la existencia del servicio. 
 					</script>
 				</section>
@@ -414,7 +414,7 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							Event Soucing es un término mucho más especial, que se refiere a los sistemas que almacenan todos los cambios en el
+							Event Sourcing es un término mucho más especial, que se refiere a los sistemas que almacenan todos los cambios en el
 							estado de la aplicación como una secuencia de eventos. Una clase de ejemplos muy conocida son los sistemas de bases de datos
 							transaccionales, que almacenan cualquier cambio de estado en un registro de transacciones. Aquí, el término "evento" se refiere
 							más a "cambio de estado", no solo a "notificación".
@@ -460,7 +460,7 @@
 							que hace que EDA sea más adecuado para ciertas operaciones comerciales e interacciones con los clientes.
 							
 							Blockchain funciona bien para transacciones, EDA funciona mejor para información. Sin embargo, Blockchain soporta nativamente
-							una de las caracterísitcas principales de EDA, **INMUTABILIDAD DE EVENTOS**.
+							una de las características principales de EDA, **INMUTABILIDAD DE EVENTOS**.
 						</script>
 					</section>
 				</section>
@@ -478,7 +478,7 @@
 						<script type="text/template">
 							#### Distributed Consensus: Single Source of truth
 
-							No es explícito en EDA, pero todo sistema distribuido necesita consenso distribuido para lamacenar hechos comunes. Por ejemplo:
+							No es explícito en EDA, pero todo sistema distribuido necesita consenso distribuido para almacenar hechos comunes. Por ejemplo:
 
 							- Selección de líder
 							- Topología
